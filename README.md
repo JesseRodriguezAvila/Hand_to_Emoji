@@ -31,9 +31,20 @@ for this we a script under filename splt_data.ipynb
 
 we borrowed code (def xml_to_csv) from generate_tfrecord.py to get the names of all different images under a folder. this function will grab the name of the images and class (label) from their respective xml files.
 
-secondly, now that we had the names of all images in a pandas dataframe, we seperated them by hand gesture / class. we created a dict list containing a hand gesture, train images and test images filenames.  
+secondly, now that we had the names of all images in a pandas dataframe, we seperated them by hand gesture / class. 
 
-for example --> [{"label": ToRight, "train": [imagefilenames], "test": [imagefiles]}, ...].
+once separated by class, for every class we randomized them and seleted 26% for testing (head of list). this was done by getting the length of all images within one gesture type, multiplied times n percent. This will determine how many will go to testing. the remaining will go to training (tail of list).
+
+
+for example --> [
+
+        {"label": ToRight, "train": [imagefilenames of 11], "test": [imagefiles of 4 images]}, 
+        
+        {"label": Ok, "train": [imagefilenames of 11], "test": [imagefiles of 4 images]},
+        
+        ...
+        
+]
 
 
 

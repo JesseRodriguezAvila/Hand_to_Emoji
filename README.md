@@ -1,6 +1,7 @@
 # Emoji-Hand
 Emoji-Hand : A Computer Vision Application To Predict Hand Emojis From Hand-poses
 
+Our code was written in jupyter notebook (.ipynb)
 
 Our project consist of 5 steps:
 1. collecting our own data
@@ -12,6 +13,7 @@ Our project consist of 5 steps:
 7. real-time detections of our hand gestures
 
 ## collecting our own data
+For the collection of our data we used Python3 and openCV
 
 
 
@@ -83,3 +85,5 @@ we need our configured pipeline.config
 
 we also need to determine which num_train_step will give us the best results
 
+
+### Step 7.) real-time detections of our hand gestures

@@ -6,14 +6,24 @@ Our code was written in jupyter notebook (.ipynb)
 The project consist of 5 steps:
 1. collecting our own data
 2. labeling (Image annotation)
-3. create label_map.pbtxt
-4. create train.record and test.record
-5. fine-tune tensorflowws pre-trained model SSD MobileNetV2
-6. Train model: SSD MobileNetV2
-7. real-time detections of our hand gestures
+3. split our custom data into training and testing sets
+4. create label_map.pbtxt
+5. create train.record and test.record
+6. fine-tune tensorflowws pre-trained model SSD MobileNetV2
+7. Train model: SSD MobileNetV2
+8. real-time detections of our hand gestures
 
-## collecting our own data
-For the collection of our data we used Python3 and openCV
+## STEP 1.) collecting our own custom dataset
+
+For the collection of our data we used Python3 and openCV.
+
+we created a jupyter notbook file called dataset_capture.ipynb
+
+In this file a function data_collect(label, num_images) can be envoked which will allows us to take n number of image for a handpose.
+
+## STEP 2.) We used the open-source labelImg.py package to manually apply an image annotation to all of our collected images
+
+## Step 3.) Creating label_map.pbtxt
 
 
 

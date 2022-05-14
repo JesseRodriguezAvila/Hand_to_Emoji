@@ -23,11 +23,20 @@ In this file a function data_collect(label, num_images) can be envoked which wil
 
 ## STEP 2.) We used the open-source labelImg.py package to manually apply to all of our collected images an image annotation
 
+## STEP 3.) split our custom data into training and testing sets
+
+# From step 4 - 7 we worked on Google collab because of our limited computing power. These steps are done under the jupyter notebook file transferlearning_pretrainModel.ipynb
+
 ## Step 4.) Creating label_map.pbtxt
 
-## Step 5.) Creating label_map.pbtxt
+we have a list containing the labels for all our hand gestures.
 
-## Step 6.) Creating train.record and test.record
+First, we create a dict list for all our hand gestures. in this list every dict contains id and name.
+
+Second, after creating dict list, we then envoke a function called creat_label_map_file which will create our label_map.pbtxt. this function requires two parameters, a path where to save the generated file and the dict list.
+
+
+## Step 5.) Creating train.record and test.record
 
 Tensorflow Object Detection API provided a script, generate_tfrecord.py, that will generate train.record and test.record
 
@@ -46,7 +55,8 @@ we then need to copy the pipeline.congif file from ssd_mobilenet_v2_fpnlite_320x
 
 
 
-### Step 6.) fine-tune tensorflowws pre-trained model SSD MobileNetV2 using transfer learning
+## Step 6.) fine-tune tensorflowws pre-trained model SSD MobileNetV2 using transfer learning
+
 we need to update our pipeline.config inside the models/ssd_mobilenet folder with the following parameters
 
 because we have 11 hand gestures
@@ -80,7 +90,7 @@ generated test.record
 
 
 
-### Step 7.) Train model: SSD MobileNetV2
+## Step 7.) Train model: SSD MobileNetV2
 
 To train tensorflows model we need to run the script model_main_tf2.py provided by tensorflow 
 for example:
@@ -95,5 +105,5 @@ we need our configured pipeline.config
 
 we also need to determine which num_train_step will give us the best results
 
-
-### Step 8.) real-time detections of our hand gestures
+# For step 8, we did it on our personal computers because of time limitaions we could not set up the camera on google colab 
+## Step 8.) real-time detections of our hand gestures

@@ -30,7 +30,7 @@ https://github.com/tensorflow/models
 
 http://download.tensorflow.org/models/object_detection/tf2/20200711/ssd_mobilenet_v2_fpnlite_320x320_coco17_tpu-8.tar.gz
 
-
+we then need to copy the pipeline.congif file from ssd_mobilenet_v2_fpnlite_320x320_coco17_tpu-8.tar.gz, then create a new folder in the models folder. in our case we named it 'ssd_mobilenet'. we need to paste that pipeline.config file inside the newly created file
 
 ### Step 5.) fine-tune tensorflowws pre-trained model SSD MobileNetV2 using transfer learning
 

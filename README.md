@@ -11,3 +11,11 @@ Our project consist of 5 steps:
 6. real-time detections of our hand gestures
 
 ### collecting our own data
+
+
+
+### create train.record and test.record
+
+Tensorflow Object Detection API provided a script, generate_tfrecord.py, that will generate train.record and test.record
+
+https://tensorflow-object-detection-api-tutorial.readthedocs.io/en/latest/training.html#create-tensorflow-records

@@ -21,4 +21,5 @@ Tensorflow Object Detection API provided a script, generate_tfrecord.py, that wi
 https://tensorflow-object-detection-api-tutorial.readthedocs.io/en/latest/training.html#create-tensorflow-records
 
 To run this scipt, we need to run generate_tfrecord.py with the following parameters:
+
 python [dir of generate_tfrecords.py] -x [dir of train or test images] -l [dir of label_map.pbtxt] -o [dir of where to save train.record or test.record]

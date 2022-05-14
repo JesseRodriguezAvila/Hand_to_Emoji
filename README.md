@@ -38,6 +38,7 @@ once separated by class, for every class we randomized them and seleted 26% for 
 
 for example -->
 [
+
         {"label": ToRight, "train": [imagefilenames of 11], "test": [imagefiles of 4 images]}, 
         
         {"label": Ok, "train": [imagefilenames of 11], "test": [imagefiles of 4 images]},

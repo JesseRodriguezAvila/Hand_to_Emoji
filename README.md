@@ -47,7 +47,7 @@ batch size of 4
 
 path to pre-trained model
 
-3.) pipeline_config.train_config.fine_tune_checkpoint = PRETRAINED_MODEL_PATH+'/ssd_mobilenet_v2_fpnlite_320x320_coco17_tpu-8/checkpoint/ckpt-0'
+3.) pipeline_config.train_config.fine_tune_checkpoint = (pathto_pre-trainedmodel)+'/ssd_mobilenet_v2_fpnlite_320x320_coco17_tpu-8/checkpoint/ckpt-0'
 
 detection type
 
@@ -55,16 +55,16 @@ detection type
 
 generated label_map
 
-5.) pipeline_config.train_input_reader.label_map_path= ANNOTATION_PATH + '/label_map.pbtxt'
-    pipeline_config.eval_input_reader[0].label_map_path = ANNOTATION_PATH + '/label_map.pbtxt'
+5.) pipeline_config.train_input_reader.label_map_path= (pathto_label_map) + '/label_map.pbtxt'
+    pipeline_config.eval_input_reader[0].label_map_path = (pathto_label_map) + '/label_map.pbtxt'
 
 generated train.record
 
-6.) pipeline_config.train_input_reader.tf_record_input_reader.input_path[:] = [ANNOTATION_PATH + '/train.record']
+6.) pipeline_config.train_input_reader.tf_record_input_reader.input_path[:] = [(pathto_train.record) + '/train.record']
 
 generated test.record
 
-7.) pipeline_config.eval_input_reader[0].tf_record_input_reader.input_path[:] = [ANNOTATION_PATH + '/test.record']
+7.) pipeline_config.eval_input_reader[0].tf_record_input_reader.input_path[:] = [(pathto_test.record) + '/test.record']
 
 
 
@@ -73,5 +73,13 @@ generated test.record
 To train tensorflows model we need to run the script model_main_tf2.py provided by tensorflow 
 for example:
 
-!python /content/drive/MyDrive/FinalProject/Tensorflow/models/research/object_detection/model_main_tf2.py --model_dir=/content/drive/MyDrive/FinalProject/Tensorflow/workspace/models/my_ssd_mobnet --pipeline_config_path=/content/drive/MyDrive/FinalProject/Tensorflow/workspace/models/my_ssd_mobnet/pipeline.config --num_train_steps=5000
+!python Tensorflow/models/research/object_detection/model_main_tf2.py --model_dir=/Tensorflow/workspace/models/my_ssd_mobnet --pipeline_config_path=/Tensorflow/workspace/models/my_ssd_mobnet/pipeline.config --num_train_steps=5000
+
+we need the file provided by tensorflow Api: model_main_tf2.py
+
+we need directory for checkpoint to save
+
+we need our configured pipeline.config
+
+we also need to determine which num_train_step will give us the best results
 

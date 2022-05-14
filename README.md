@@ -25,6 +25,20 @@ In this file a function data_collect(label, num_images) can be envoked which wil
 
 ## STEP 3.) split our custom data into training and testing sets
 
+once image annotation is completed, we splitted our data.
+
+for this we a script under filename splt_data.ipynb
+
+we borrowed code (def xml_to_csv) from generate_tfrecord.py to get the names of all different images under a folder. this function will grab the name of the images and class (label) from their respective xml files.
+
+secondly, now that we had the names of all images in a pandas dataframe, we seperated them by hand gesture / class. we created a dict list containing a hand gesture, train images and test images filenames.  
+
+for example --> [{"label": ToRight, "train": [imagefilenames], "test": [imagefiles]}, ...].
+
+
+
+
+
 # From step 4 - 7 we worked on Google collab because of our limited computing power. These steps are done under the jupyter notebook file transferlearning_pretrainModel.ipynb
 
 ## Step 4.) Creating label_map.pbtxt

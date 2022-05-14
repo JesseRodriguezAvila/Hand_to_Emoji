@@ -38,26 +38,33 @@ we then need to copy the pipeline.congif file from ssd_mobilenet_v2_fpnlite_320x
 we need to update our pipeline.config inside the models/ssd_mobilenet folder with the following parameters
 
 because we have 11 hand gestures
+
 1.) pipeline_config.model.ssd.num_classes = 11
 
 batch size of 4
+
 2.) pipeline_config.train_config.batch_size = 4
 
 path to pre-trained model
+
 3.) pipeline_config.train_config.fine_tune_checkpoint = PRETRAINED_MODEL_PATH+'/ssd_mobilenet_v2_fpnlite_320x320_coco17_tpu-8/checkpoint/ckpt-0'
 
 detection type
+
 4.) pipeline_config.train_config.fine_tune_checkpoint_type = "detection"
 
 generated label_map
+
 5.) pipeline_config.train_input_reader.label_map_path= ANNOTATION_PATH + '/label_map.pbtxt'
     pipeline_config.eval_input_reader[0].label_map_path = ANNOTATION_PATH + '/label_map.pbtxt'
 
 generated train.record
+
 6.) pipeline_config.train_input_reader.tf_record_input_reader.input_path[:] = [ANNOTATION_PATH + '/train.record']
 
 generated test.record
-8.) pipeline_config.eval_input_reader[0].tf_record_input_reader.input_path[:] = [ANNOTATION_PATH + '/test.record']
+
+7.) pipeline_config.eval_input_reader[0].tf_record_input_reader.input_path[:] = [ANNOTATION_PATH + '/test.record']
 
 
 

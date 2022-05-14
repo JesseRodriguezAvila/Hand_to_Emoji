@@ -19,7 +19,7 @@ For the collection of our data we used Python3 and openCV.
 
 we created a jupyter notbook file called dataset_capture.ipynb
 
-In this file a function data_collect(label, num_images) can be envoked which will allows us to take n number of image for a handpose.
+In this file a function data_collect(label, num_images) can be envoked which will allows us to take n number of image for a handpose. This process is then repeated for a number of desired hand gestures / poses
 
 ## STEP 2.) We used the open-source labelImg.py package to manually apply an image annotation to all of our collected images
 

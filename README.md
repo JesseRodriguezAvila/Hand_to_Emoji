@@ -10,11 +10,11 @@ Our project consist of 5 steps:
 5. fine-tune tensorflowws pre-trained model SSD MobileNetV2
 6. real-time detections of our hand gestures
 
-### collecting our own data
+## collecting our own data
 
 
 
-### creating train.record and test.record
+## creating train.record and test.record
 
 Tensorflow Object Detection API provided a script, generate_tfrecord.py, that will generate train.record and test.record
 

@@ -14,7 +14,7 @@ Our project consist of 5 steps:
 
 
 
-## creating train.record and test.record
+## Step 4.) Creating train.record and test.record
 
 Tensorflow Object Detection API provided a script, generate_tfrecord.py, that will generate train.record and test.record
 

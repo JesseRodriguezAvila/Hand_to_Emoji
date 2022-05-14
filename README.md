@@ -36,14 +36,13 @@ secondly, now that we had the names of all images in a pandas dataframe, we sepe
 once separated by class, for every class we randomized them and seleted 26% for testing (head of list). this was done by getting the length of all images within one gesture type, multiplied times n percent. This will determine how many will go to testing. the remaining will go to training (tail of list).
 
 
-for example --> [
-
+for example -->
+[
         {"label": ToRight, "train": [imagefilenames of 11], "test": [imagefiles of 4 images]}, 
         
         {"label": Ok, "train": [imagefilenames of 11], "test": [imagefiles of 4 images]},
         
-        ...
-        
+        ...  
 ]
 
 

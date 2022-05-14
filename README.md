@@ -25,10 +25,12 @@ To run this scipt, we need to run generate_tfrecord.py with the following parame
 
 python [dir of generate_tfrecords.py] -x [dir of train or test images] -l [dir of label_map.pbtxt] -o [dir of where to save train.record or test.record]
 
-### Before moving on we need to download TF models from Tensorflow model zoo
+## BEFORE MOVINF ON, WE NEED TO DOWNLOAD Tensorflow models FROM Tensorflow model zoo 
 https://github.com/tensorflow/models
 
 http://download.tensorflow.org/models/object_detection/tf2/20200711/ssd_mobilenet_v2_fpnlite_320x320_coco17_tpu-8.tar.gz
+
+
 
 ### Step 5.) fine-tune tensorflowws pre-trained model SSD MobileNetV2 using transfer learning
 

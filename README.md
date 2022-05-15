@@ -142,3 +142,6 @@ we also need to determine which num_train_step will give us the best results
 
 # For step 8, we did it on our personal computers because of time limitaions we could not set up the camera on google colab 
 ## Step 8.) real-time detections of our hand gestures
+
+In this file we load the checkpoint created by the model.
+we then use openCV to live capture video fead and detect our hand gesture using our fine-tune TF pre-trained model
